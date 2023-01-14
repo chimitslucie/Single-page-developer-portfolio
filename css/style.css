@@ -120,7 +120,8 @@ p {
 }
 
 .contact__link::after,
-.overlay__link::after {
+.overlay__link::after,
+.card__link::after {
     content: "";
     height: 2px;
     background: var(--green);
@@ -194,7 +195,7 @@ header .informationbar {
     width: 120px;
 }
 
-hr {
+.hero hr {
     width: 100%;
     height: 1px;
     color: var(--white);
@@ -225,6 +226,10 @@ hr {
     width: 530px;
     top: 250px;
     right: -450px;
+}
+
+.skill hr {
+    display: none;
 }
 /* end skill */
 
@@ -301,6 +306,10 @@ hr {
 
 .code__link::after {
     width: 105px;
+}
+
+.card__links {
+    display: none;
 }
 /* end project */
 
@@ -421,7 +430,7 @@ footer hr {
 }
 /* end footer */
 
-/* responsive tablet */
+/* start responsive tablet */
 @media (max-width: 769px) {
     .container {
         width: 710px;
@@ -434,11 +443,297 @@ footer hr {
     }
 
     .img__profil {
-            background: url(../img/image-profile-tablet.webp);
-            background-size: contain;
-            width: 322px;
-            height: 600px;
-            right: -30px;
-            top: -200px;
+        background: url(../img/image-profile-tablet.webp);
+        background-size: contain;
+        width: 322px;
+        height: 600px;
+        right: -30px;
+        top: -200px;
+    }
+
+    .hero {
+        margin-bottom: 50px;
+    }
+
+    .subtitle {
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: -2.05px;
+        max-width: 410px;
+    }
+
+    .title {
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: -2.05px;
+        max-width: 535px;
+        margin-bottom: 60px;
+    }
+
+    .title::after {
+        width: 402px;
+        margin-left: 110px;
+    }
+
+    .hero__text {
+        margin-bottom: 35px;
+    }
+
+    .circle {
+        right: -95px;
+        top: 270px;
+    }
+
+    .hero hr {
+        margin-top: 60px;
+    }
+
+    .skill {
+        margin-bottom: 100px;
+    }
+
+    .skill__cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 7px;
+        grid-row-gap: 50px;
+    }
+
+    .ring-middle {
+        top: 335px;
+        right: -369px;
+    }
+
+    .project-top {
+        margin-bottom: 60px;
+    }
+
+    .project__title {
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: -2.05px;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .card__links {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .card__link + .card__link {
+        margin-left: 30px;
+    }
+
+    .card__link::after {
+        width: 140px;
+    }
+
+    .card__link:last-child:after {
+        width: 105px;
+    }
+
+    footer {
+        margin-top: 100px;
+        padding: 60px 0 40px 0;
+    }
+
+    .footer__body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__content {
+        text-align: center;
+    }
+
+    .footer__title {
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: -2.05px;
+        margin-bottom: 20px;
+    }
+
+    .footer__text {
+        margin-bottom: 50px;
+    }
+
+    .ring-bottom {
+        top: 500px;
+        left: -423px;
+    }
+
+    footer hr {
+        margin-bottom: 30px;
     }
 }
+/* end responsive tablet */
+
+/* start responsive phone */
+@media (max-width: 375px) {
+    .container {
+        width: 345px;
+    }
+
+    .ring-top {
+        top: 130px;
+        left: -225px;
+        z-index: -1;
+    }
+
+    .informationbar {
+        flex-direction: column;
+    }
+
+    header .informationbar {
+        margin-top: 20px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+        font-size: 24px;
+        letter-spacing: -0.33px;
+    }
+
+    .img__profil {
+        background: url(../img/image-profile-mobile.webp) no-repeat;
+        background-size: contain;
+        right: 86px;
+        top: -425px;
+        width: 175px;
+        height: 383px;
+    }
+
+    .hero {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .subtitle,
+    .title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -1.14px;
+    }
+
+    .title::after {
+        width: 225px;
+        margin-left: 86px;
+    }
+
+    .subtitle {
+        margin-top: 320px;
+    }
+
+    .title {
+        margin-bottom: 20px;
+    }
+
+    .hero__text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0;
+        margin-bottom: 25px;
+    }
+
+    .hero .contact__link::after {
+        margin: auto;
+    }
+
+    .hero hr {
+        margin-top: 80px;
+    }
+
+    .circle {
+        top: -172px;
+    }
+
+    .skill {
+        margin-bottom: 80px;
+    }
+
+    .skill__cards {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        grid-row-gap: 25px;
+    }
+
+    .skill hr {
+        display: block;
+        width: 100%;
+        height: 1px;
+        color: var(--white);
+        margin-top: 40px;
+    }
+
+    .skill-title {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -1px;
+        margin-bottom: 1px;
+    }
+
+    .skill-text {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .ring-middle {
+        top: 508px;
+        right: -194px;
+    }
+
+    .project-top {
+        margin-bottom: 40px;
+    }
+
+    .project__title {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.14px;
+    }
+
+    .project__cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 40px;
+    }
+
+    footer {
+        margin-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    .footer__title {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.14px;
+    }
+
+    .footer__text {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .message {
+        background: transparent;
+    }
+
+    footer hr {
+        margin-top: 85px;
+    }
+
+    .ring-bottom {
+        top: 380px;
+        left: -215px;
+    }
+}
+
